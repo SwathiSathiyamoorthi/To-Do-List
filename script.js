@@ -7,10 +7,12 @@ let newButton;
 submit.addEventListener('click',(event)=>{
     if(task.value!=''){
     list.push(task.value);
-    newButton=document.createElement('button');
-    newButton.textContent=task.value;
-    newButton.id=list.length-1;
-    tasklist.appendChild(newButton);
+    newTask=document.createElement('div');
+    newTask.textContent=task.value;
+    newTask.id=list.length-1;
+    tasklist.appendChild(newTask);
+    tasks.style.display='grid';
+    tasklist.style.display='grid';
     //tasklist.appendChild='<button id="'+(list.length-1)+'">'+task.value+'</button>';
     task.value='';
     }

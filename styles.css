@@ -42,11 +42,27 @@ body{
     background-color: white;
     color:black;
     display: grid;
-    justify-content: center;
-    justify-items: center;
+    justify-content:start;
+    align-items:space-evenly;
     height: auto;
-    
+    padding: 20px;
+    display: none;
 }
 #tasklist{
     height: auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items:space-evenly;
+   
 }
+#tasklist{
+    justify-content:start;
+    border-radius: 4px;
+    font-size:20px;
+    padding: 10px;
+    background-color:rgb(255, 255, 255);
+    color: rgb(19, 10, 10);
+    display: none;
+    position: relative;
+}
+
