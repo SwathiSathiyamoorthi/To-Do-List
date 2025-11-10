@@ -44,5 +44,9 @@ body{
     display: grid;
     justify-content: center;
     justify-items: center;
-    display: none;
+    height: auto;
+    
+}
+#tasklist{
+    height: auto;
 }
