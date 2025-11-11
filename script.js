@@ -7,7 +7,7 @@ let newButton;
 submit.addEventListener('click',(event)=>{
     if(task.value!=''){
     list.push(task.value);
-    newTask=document.createElement('div');
+    newTask=document.createElement('button');
     newTask.textContent=task.value;
     newTask.id=list.length-1;
     tasklist.appendChild(newTask);
