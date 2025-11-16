@@ -1,47 +1,70 @@
-body{
-    background-image:linear-gradient(to right,rgb(98, 49, 123),rgb(132, 32, 182));
+*{
     margin: 0;
-    font-family:Arial, Helvetica, sans-serif;
-    display: flex;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background-color: blueviolet;
     justify-content: center;
-    height: 100vh;
     align-items: center;
+    height: 100vh;
+    width:100%;
+}
+h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
 }
 #container{
   /* background-color:rgb(176, 94, 218);
    background-image:linear-gradient(to right,rgb(100, 40, 131),rgb(188, 154, 205));*/
+   margin: 100px auto 20px;
+   background-color:blueviolet;
+   border-radius:10px;
    display: grid; 
-   gap:50px;
-   justify-content: center;
+   gap:30px;
+   height:auto;
+   width: 600px;
 }
 #newtask{
     background-color: white;
-    color:rgb(114, 108, 108);
-    display: grid;
-    gap:20px;
+    
+    display: flex;
+    min-height:100px;
+    width:100%;
+    justify-content: space-between;
+    padding:40px auto 40px;
+    /*gap:20px;
     padding: 20px 40px ;
     grid-template-columns: 2fr 1fr;
     justify-content: center;
-    align-items:center;
-    height:100px;
-    width:400px;
+    */
+    
     border-radius: 10px;
 }
 #task{
-    height: 40px;
-    border-radius: 10px;
-    opacity: 0.5;
-    padding-left:10px;
+    height:auto;
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    border-radius: 30px;
+    opacity: 0.7;
+    font-size: 20px;
+    align-self: center;
+    color:rgb(134, 117, 142);
 }
 #submit{
-    height: 46px;
-    border-radius: 10px;
-    font-size:20px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    background-color:rgb(150, 70, 189);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size:16px;
+    margin:20px;
+    padding:10px 50px;
+    background-color:blueviolet;
     color: white;
+   
 }
 
 #tasks{
@@ -56,30 +79,37 @@ body{
 #tasklist{
     height: auto;
     grid-template-columns: 1fr;
-    gap: 20px;
     align-items:space-evenly;
    
 }
 #tasklist{
     border-radius: 10px;
     font-size:20px;
-    padding: 10px;
     background-color:rgb(255, 255, 255);
     color: rgb(19, 10, 10);
     display: none;
     position: relative;
 }
-button{
+#tasklist button{
     height:48px;
     width:100%;
-    padding-left: 20px;
+    padding: 0px 20px;
     background-color: rgb(254, 254, 254);
-    color:rgb(43, 37, 46);
+    color:rgb(134, 117, 142);
     font-size: 20px;
     border-radius: 10px;
     border: none;
-    outline: 0px;
-    box-shadow: 0px 1px 10px 0px rgb(38, 7, 51);
+    outline:none;
     text-align: start;
+}
+#tasklist button::before{
+    content:'';
+    background-color: rgb(252, 252, 252);
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left:-10px;
+    border:2px solid black;
+    border-radius: 50%;
 }
 
