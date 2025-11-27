@@ -10,14 +10,15 @@
 <body>
     <div id="container">
         <h1>To Do List</h1>
-        <div id="newtask">
-            <input id="task" type="text" placeholder="Task to be done">
-            <button id="submit">Add Task</button>
-        </div>
-        <div id="tasks">
-            <div id="tasklist">
+        <div class="todo-list">
+            <div id="newtask">
+                <input id="task" type="text" placeholder="Task to be done">
+                <button id="submit" onclick="AddTask()">Add Task</button>
             </div>
-            <div id="completedtasks"></div>
+            <ul id="task-container">
+               <!-- <li class="checked">Task1</li>
+                <li>Task2</li>--> 
+            </ul>
         </div>
     </div>
     <script src="script.js"></script>

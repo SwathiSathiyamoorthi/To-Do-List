@@ -4,13 +4,6 @@
     box-sizing: border-box;
     font-family:'Poppins',sans-serif;
 }
-body{
-    background-color: blueviolet;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width:100%;
-}
 h1{
     text-align: center;
     color: rgb(255, 255, 255);
@@ -18,29 +11,37 @@ h1{
 #container{
   /* background-color:rgb(176, 94, 218);
    background-image:linear-gradient(to right,rgb(100, 40, 131),rgb(188, 154, 205));*/
-   margin: 100px auto 20px;
    background-color:blueviolet;
-   border-radius:10px;
-   display: grid; 
-   gap:30px;
-   height:auto;
-   width: 600px;
+   display:flex; 
+   flex-direction: column;
+   height: 100vh;
+   width:100%;
+   justify-content: center;
+   align-items: center;
+}
+#container h1{
+    margin: 20px;
+}
+.todo-list{
+     border-radius:30px;
+     padding: 20px 20px 20px 20px;
+     background-color: white;
+}
+input[type="text"]:focus{
+    background-color: brown;
 }
 #newtask{
-    background-color: white;
-    
+    background-color: rgb(234, 242, 246);
     display: flex;
-    min-height:100px;
-    width:100%;
     justify-content: space-between;
-    padding:40px auto 40px;
+    margin:40px auto 0px;
+    border-radius:40px;
     /*gap:20px;
     padding: 20px 40px ;
     grid-template-columns: 2fr 1fr;
     justify-content: center;
     */
     
-    border-radius: 10px;
 }
 #task{
     height:auto;
@@ -48,68 +49,80 @@ h1{
     background: transparent;
     border: none;
     outline: none;
-    margin-left: 20px;
+    margin: 0px 40px;
     border-radius: 30px;
     opacity: 0.7;
     font-size: 20px;
     align-self: center;
-    color:rgb(134, 117, 142);
+    color:rgb(148, 45, 195);
 }
 #submit{
     border: none;
     outline: none;
-    border-radius: 30px;
-    font-size:16px;
-    margin:20px;
-    padding:10px 50px;
+    border-radius: 40px;
+    font-size:20px;
+    padding:16px 50px;
     background-color:blueviolet;
     color: white;
    
 }
-
-#tasks{
+#task-container{
+    list-style: none;
     background-color: white;
     color:black;
     align-items:space-evenly;
     height: auto;
-    padding: 20px;
-    display: none;
-    border-radius: 10px;
+    padding: 20px 0px;
 }
-#tasklist{
-    height: auto;
-    grid-template-columns: 1fr;
-    align-items:space-evenly;
-   
-}
-#tasklist{
-    border-radius: 10px;
-    font-size:20px;
-    background-color:rgb(255, 255, 255);
-    color: rgb(19, 10, 10);
-    display: none;
+ul li{
+    color: black;
+    margin: 20px 0px 14px 0px;
+    padding-left: 40px;
+    justify-content: start;
+    font-size: 20px;
     position: relative;
 }
-#tasklist button{
-    height:48px;
-    width:100%;
-    padding: 0px 20px;
-    background-color: rgb(254, 254, 254);
+ul li::before{
+    content: '';
+    width: 25px;
+    height:25px;
+    background-color: rgb(255, 252, 252);
+    position: absolute; 
+    left:1px;
+    top:-4px;
+    border: 2px solid rgb(101, 88, 88);
+    border-radius: 50%;   
+}
+span{
+    color:black;
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    border-radius: 50%;
+    font-size: 30px;
+    line-height: 30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    align-self: center;
+}
+span:hover{
+    background-color: rgb(212, 185, 185);
+}
+ul li.checked{
+    
     color:rgb(134, 117, 142);
     font-size: 20px;
+    text-decoration: line-through;
     border-radius: 10px;
     border: none;
     outline:none;
     text-align: start;
 }
-#tasklist button::before{
-    content:'';
-    background-color: rgb(252, 252, 252);
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    left:-10px;
-    border:2px solid black;
-    border-radius: 50%;
+ul li.checked::before{
+    background-image:url(tick.jpg);
+    background-size: cover;
+    background-position: center;
 }
+
 
